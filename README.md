@@ -12,7 +12,9 @@ Task 2:
 TCP connection.Here two parties are establishing the communication by TLS handshake using necessary
 certificates.For this we have included SSL C functions and header files.Basically the same program
 can be used as both server and client depending upon the arguements.
+
 -----------------------EXECUTE-----------------------------------------------------------------------
+
 To compile the code : make 
 To run as a server[Bob]    :./secure_chat_app -s
 To run aa a client[Alice]  :./secure_chat_app -c bob1
@@ -21,7 +23,9 @@ Task 3:
    The secure_chat_interceptor.c does downgrade attack and makes the communication between Alice and 
 Bob unsecure .Before executing the above program it is necessary to poison the /etc/host file of Alice
 /Bob .
+
 -------------------------------EXECUTE--------------------------------------------------------------
+
 poison the dns: bash ~/poison-dns-alice1-bob1.sh
 To compile the code: make
 To run the code:./secure_chat_interceptor -d alice1 bob1
@@ -32,7 +36,9 @@ Task 4:
 and Bob.So here we generated the fake certificates using openssl command and verified it as a valid ones.
 The fake certificates are stored in the "FakeCerts" directory of Trudy container.Trudy sends chat_STARTTLS
 to Bob and starts sharing these verified fake certificates.
+
 -------------------------------EXECUTE-----------------------------------------------------------------
+
 poison the dns: bash ~/poison-dns-alice1-bob1.sh
 To compile the code: make
 To run the code:./secure_chat_interceptor -m alice1 bob1
