@@ -2,11 +2,11 @@
 
 Project done as part of "Network Security" course offered at IIT Hyderabad
 
-
 Task1 :
    All the necessary certificates required to establish TLS communication are generated using openssl
 commands and are kept in the necessary containers.The certificates are stored in the "TLSCerts"
 directory of Alice and Bob Container.
+
 -----------------------------------------------------------------------------------------------------
 
 Task 2:
@@ -21,6 +21,7 @@ can be used as both server and client depending upon the arguements.
 To compile the code : make 
 To run as a server[Bob]    :./secure_chat_app -s
 To run aa a client[Alice]  :./secure_chat_app -c bob1
+
 ---------------------------------------------------------------------------------------------------
 
 Task 3:
@@ -35,6 +36,7 @@ poison the dns: bash ~/poison-dns-alice1-bob1.sh
 To compile the code: make
 To run the code:./secure_chat_interceptor -d alice1 bob1
 Unpoison the dns:bash ~/unpoison-dns-alice1-bob1.sh
+
 ---------------------------------------------------------------------------------------------------
 
 Task 4:
